@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Spaceship Flight Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sim-container">
+    <canvas id="flightCanvas"></canvas>
+    <div class="instrument-panel" id="instrumentPanel">
+      <div id="airspeed">Airspeed: 0</div>
+      <div id="altitude">Altitude: 0</div>
+      <div id="heading">Heading: 0</div>
+      <div id="warning"></div>
+    </div>
+    <div class="controls">
+      <div class="row">
+        <button class="neon-btn" id="btn-up">↑</button>
+      </div>
+      <div class="row">
+        <button class="neon-btn" id="btn-left">←</button>
+        <button class="neon-btn" id="btn-center">◎</button>
+        <button class="neon-btn" id="btn-right">→</button>
+      </div>
+      <div class="row">
+        <button class="neon-btn" id="btn-down">↓</button>
+      </div>
+      <div class="row">
+        <button class="neon-btn" id="btn-throttle-up">Thrust+</button>
+        <button class="neon-btn" id="btn-throttle-down">Thrust-</button>
+        <button class="neon-btn" id="btn-rudder-left">Rud ←</button>
+        <button class="neon-btn" id="btn-rudder-right">Rud →</button>
+      </div>
+      <div class="row">
+        <button class="neon-btn" id="btn-reset">Reset</button>
+        <button class="neon-btn" id="btn-camera">Camera</button>
+      </div>
+    </div>
+  </div>
+  <audio id="engineSound" loop src="engine.mp3"></audio>
+  <audio id="windSound" loop src="wind.mp3"></audio>
+  <audio id="stallSound" src="stall.mp3"></audio>
+  <script src="app.js"></script>
+</body>
+</html>
